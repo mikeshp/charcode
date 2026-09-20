@@ -29,9 +29,13 @@ int main(int argc, char** argv)
 		}
 	}
 
-	if (user_char > 32 && user_char < 127)
+	if (user_char >= 128)
 	{
-		printf("The ASCII code for \'%c\' is %d\n", user_char, user_char);
+		printf("Multi-byte UTF-8 character (not ASCII)\n");
+	}
+	else if (user_char > 32 && user_char < 127)
+	{
+		printf("The ASCII code for \"%c\" is %d\n",user_char,user_char);
 	}
 	else
 	{
