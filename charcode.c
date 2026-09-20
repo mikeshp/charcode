@@ -6,27 +6,37 @@
 
 int main(int argc, char** argv)
 {
-	char chr;
-	int clear;
+	unsigned char user_char;
 
 	if (argc > 1)
 	{
-		chr = argv[1][0];
+		user_char = argv[1][0];
 	}
 	else
 	{
 		printf("Enter a character: ");
-		scanf(" %c", &chr);
-		while ((clear = getchar()) != '\n' && clear != EOF);
+
+		char user_input[32];
+
+		if (fgets(user_input,sizeof(user_input),stdin) == NULL)
+		{
+			printf("Error reading input\n");
+			return 1;
+		}
+		else
+		{
+			user_char = user_input[0];
+		}
 	}
 
-	if (chr > 255)
+	if (user_char > 32 && user_char < 127)
 	{
-		printf("The character is out of range!\n");
+		printf("The ASCII code for \'%c\' is %d\n", user_char, user_char);
 	}
 	else
 	{
-		printf("The ASCII code for \'%c\' is %d\n", chr, chr);
+		printf("The ASCII code for %s is %d\n",
+		(user_char == 32) ? "<Space>" : "the input", user_char);
 	}
 
 	return 0;
