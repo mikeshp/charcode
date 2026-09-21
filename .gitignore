@@ -57,3 +57,5 @@ dkms.conf
 # Debian
 releases/
 *.deb
+doc-pak/
+description-pak
