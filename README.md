@@ -1,36 +1,37 @@
 # charcode
-**A simple CLI utility that prints the ASCII code of a given character**
+**A simple CLI utility that prints the ASCII code for a given character**
 
 ---
 
 This is a study project.
 
 Despite this fact, I do use this utility myself on daily basis,<br>
-and therefore I will continue to update it with new features.
+and therefore I may continue to update it with new features.
 
 ## Usage
 You can pass the character in question as an argument,<br>
 or type it in a prompt when executing the **`charcode`** command.
 
 ## Installation
-* On Linux, download and install the **latest release** (recommended):<br>
+* On Debian, download and install the **latest release** (recommended):<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `sudo apt install ./charcode_1.1-1_amd64.deb`<br>
 * To compile and install from source using **Makefile**, run:<br>
-&nbsp;&nbsp;&nbsp;&nbsp; `make clean`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `sudo apt install build-essential gcc make`<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `make`<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `sudo make install`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `make clean`<br>
 * To compile and install from source using **GCC**, run:<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `sudo apt install build-essential gcc`<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `gcc charcode.c -o charcode`<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `chmod 755 charcode`<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `sudo mkdir -p /usr/local/bin`<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `sudo mv charcode /usr/local/bin/charcode`<br>
-* To uninstall it later, run:
-&nbsp;&nbsp;&nbsp;&nbsp; If you installed with **APT**, run:<br>
+* To uninstall it later, run:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; If you installed with **APT**:<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `sudo apt autoremove charcode`<br>
-&nbsp;&nbsp;&nbsp;&nbsp; If you compiled and installed from source, run:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; If you compiled and installed from source:<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `sudo rm -f /usr/local/bin/charcode`<br>
-&nbsp;&nbsp;&nbsp;&nbsp; In case you changed the directory in **Makefile**, run:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; In case you changed the directory in **Makefile**:<br>
 &nbsp;&nbsp;&nbsp;&nbsp; `sudo rm -f $(whereis charcode | cut -d' ' -f2)`<br>
 
 ## Known bugs
