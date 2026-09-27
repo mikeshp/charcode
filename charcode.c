@@ -6,7 +6,7 @@
 
 int main(int argc, char** argv)
 {
-	unsigned char user_char;
+	int user_char;
 
 	if (argc > 1)
 	{
@@ -16,7 +16,7 @@ int main(int argc, char** argv)
 	{
 		printf("Enter a character: ");
 
-		char user_input[32];
+		char user_input[4];
 
 		if (fgets(user_input,sizeof(user_input),stdin) == NULL)
 		{
