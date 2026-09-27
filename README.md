@@ -1,9 +1,39 @@
 # charcode
-### A simple CLI utility that prints the ASCII code of a given character
+**A simple CLI utility that prints the ASCII code of a given character**
 
-<br><br>
-You can pass the character in question as an argument,
-<br>
-or type it in after executing **`charcode`** command.
-<br><br>
-Compiles with **`gcc`**.
+---
+
+This is a study project.
+
+Despite this fact, I do use this utility myself on daily basis,<br>
+and therefore I will continue to update it with new features.
+
+## Usage
+You can pass the character in question as an argument,<br>
+or type it in a prompt when executing the **`charcode`** command.
+
+## Installation
+* On Linux, download and install the **latest release** (recommended):<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `sudo apt install ./charcode_1.1-1_amd64.deb`<br>
+* To compile and install from source using **Makefile**, run:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `make clean`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `make`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `sudo make install`<br>
+* To compile and install from source using **GCC**, run:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `sudo apt install build-essential gcc`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `gcc charcode.c -o charcode`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `chmod 755 charcode`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `sudo mkdir -p /usr/local/bin`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `sudo mv charcode /usr/local/bin/charcode`<br>
+* To uninstall it later, run:
+&nbsp;&nbsp;&nbsp;&nbsp; If you installed with **APT**, run:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `sudo apt autoremove charcode`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; If you compiled and installed from source, run:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `sudo rm -f /usr/local/bin/charcode`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; In case you changed the directory in **Makefile**, run:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `sudo rm -f $(whereis charcode | cut -d' ' -f2)`<br>
+
+## Known bugs
+* It will ignore the multibyte commands, such as when pressing `<Enter>` or a cursor key
+* The multibyte commands will show wrong characters instead of properly interpreted commands
+* It will not recognize and display properly the characters beyond the standard 128 ASCII table
