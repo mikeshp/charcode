@@ -38,3 +38,7 @@ or type it in a prompt when executing the **`charcode`** command.
 * It will ignore the multibyte commands, such as when pressing `<Enter>` or a cursor key
 * The multibyte commands will show wrong characters instead of properly interpreted commands
 * It will not recognize and display properly the characters beyond the standard 128 ASCII table
+
+---
+## License
+Distributed under the **MIT License**, see [LICENSE](LICENSE) for more details.
