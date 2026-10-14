@@ -1,5 +1,5 @@
 /* Developed by Mikhail Shprygov */
-/* Profile: github.com/mshprygov */
+/* Profile: codeberg.org/mikeshp */
 /* Contact: mike.shp@hotmail.com */
 
 #include <stdio.h>
